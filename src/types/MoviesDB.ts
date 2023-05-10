@@ -43,6 +43,48 @@ export interface MovieDetails extends Movie {
   tagline: string;
 }
 
+export interface MovieTrailerDBRes {
+  id: string;
+  results: MovieTrailers[];
+}
+
+export interface MovieTrailers {
+  videoKey: VideoKey[];
+  id: string;
+  iso_938_1: string;
+  iso_3166_1: string;
+  key: string;
+  name: string;
+  official: boolean;
+  site: string;
+  size: number;
+  type: string;
+}
+export interface VideoKey extends MovieTrailers {
+  id: string;
+  iso_938_1: string;
+  iso_3166_1: string;
+  key: string;
+  name: string;
+  official: boolean;
+  site: string;
+  size: number;
+  type: string;
+}
+
+export interface ProductionCompanyPoster extends MovieDetails{
+  id: number;
+  name: string;
+  logo_path: string;
+  origin_country: string;
+  undefined: undefined
+}
+
+export interface MovieGenre extends MovieDetails {
+  id: number;
+  name: string;
+}
+
 export interface BelongsToCollection {
   id: number;
   name: string;
@@ -75,4 +117,14 @@ export interface SpokenLanguage {
 
 export interface Search {
   query: string
+}
+
+export interface Credit {
+  adult: boolean;
+  cast_id: number;
+  credit_id: string;
+  gender: number;
+  character: string;
+  name: string;
+  profile_path?: string | null | undefined;
 }

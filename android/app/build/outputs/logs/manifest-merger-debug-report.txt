@@ -9,12 +9,14 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\gamer
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\gamer\.gradle\caches\transforms-3\d583b133a68ceecad4ecdddb740e6639\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\gamer\.gradle\caches\transforms-3\236929aa564a4c4dfa1b417642a2a2ae\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:8:1-18:12
 MERGED from [:react-native-config] H:\movies-app-mobile\node_modules\react-native-config\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-splash-screen] H:\movies-app-mobile\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] H:\movies-app-mobile\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-linear-gradient] H:\movies-app-mobile\node_modules\react-native-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] H:\movies-app-mobile\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] H:\movies-app-mobile\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-svg] H:\movies-app-mobile\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] H:\movies-app-mobile\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-video] H:\movies-app-mobile\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-webview] H:\movies-app-mobile\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [com.facebook.react:react-android:0.71.5] C:\Users\gamer\.gradle\caches\transforms-3\6de4b65bd4396299c1f22d913013cde6\transformed\jetified-react-android-0.71.5-debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\gamer\.gradle\caches\transforms-3\091aa78edfb1f2d80073a0612085f398\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -37,6 +39,7 @@ MERGED from [com.facebook.fresco:imagepipeline:2.6.0] C:\Users\gamer\.gradle\cac
 MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] C:\Users\gamer\.gradle\caches\transforms-3\e719d0f842c50945933d9ad949cfe736\transformed\jetified-nativeimagetranscoder-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\gamer\.gradle\caches\transforms-3\1f1efa8ba876ad719b65ea6db8106154\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\gamer\.gradle\caches\transforms-3\4af7f0d23266db3f5bdb15fc939a61bd\transformed\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.adityaxjha:Android-ScalableVideoView:10e7b4da8b] C:\Users\gamer\.gradle\caches\transforms-3\51737a27f57f328a4dc4384b2fe83cea\transformed\jetified-Android-ScalableVideoView-10e7b4da8b\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\gamer\.gradle\caches\transforms-3\be9a285d7d94d789380b4b7ef5365ae2\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\gamer\.gradle\caches\transforms-3\a022374c772579687e4a912372d249a2\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\gamer\.gradle\caches\transforms-3\c10bb5e6b3f5dcf7b6548984476ee588\transformed\jetified-appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
@@ -132,13 +135,13 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ga
 	tools:ignore
 		ADDED from H:\movies-app-mobile\android\app\src\debug\AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:9:7-52
-		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:9:7-52
+		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:9:7-48
+		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:9:7-48
 	tools:targetApi
 		ADDED from H:\movies-app-mobile\android\app\src\debug\AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:8:7-41
-		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:8:7-41
+		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:8:7-43
+		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:8:7-43
 	android:allowBackup
 		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:10:7-34
 		ADDED from H:\movies-app-mobile\android\app\src\main\AndroidManifest.xml:10:7-34
@@ -186,6 +189,8 @@ MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\gamer\.gradle\caches
 MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\gamer\.gradle\caches\transforms-3\236929aa564a4c4dfa1b417642a2a2ae\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:11:5-13:41
 MERGED from [:react-native-config] H:\movies-app-mobile\node_modules\react-native-config\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-config] H:\movies-app-mobile\node_modules\react-native-config\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-splash-screen] H:\movies-app-mobile\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-splash-screen] H:\movies-app-mobile\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] H:\movies-app-mobile\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] H:\movies-app-mobile\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-linear-gradient] H:\movies-app-mobile\node_modules\react-native-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -198,6 +203,8 @@ MERGED from [:react-native-svg] H:\movies-app-mobile\node_modules\react-native-s
 MERGED from [:react-native-svg] H:\movies-app-mobile\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] H:\movies-app-mobile\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] H:\movies-app-mobile\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-video] H:\movies-app-mobile\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-video] H:\movies-app-mobile\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-webview] H:\movies-app-mobile\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-webview] H:\movies-app-mobile\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-android:0.71.5] C:\Users\gamer\.gradle\caches\transforms-3\6de4b65bd4396299c1f22d913013cde6\transformed\jetified-react-android-0.71.5-debug\AndroidManifest.xml:5:5-7:41
@@ -242,6 +249,8 @@ MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\gamer\.gradl
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\gamer\.gradle\caches\transforms-3\1f1efa8ba876ad719b65ea6db8106154\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\gamer\.gradle\caches\transforms-3\4af7f0d23266db3f5bdb15fc939a61bd\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\gamer\.gradle\caches\transforms-3\4af7f0d23266db3f5bdb15fc939a61bd\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.adityaxjha:Android-ScalableVideoView:10e7b4da8b] C:\Users\gamer\.gradle\caches\transforms-3\51737a27f57f328a4dc4384b2fe83cea\transformed\jetified-Android-ScalableVideoView-10e7b4da8b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.adityaxjha:Android-ScalableVideoView:10e7b4da8b] C:\Users\gamer\.gradle\caches\transforms-3\51737a27f57f328a4dc4384b2fe83cea\transformed\jetified-Android-ScalableVideoView-10e7b4da8b\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\gamer\.gradle\caches\transforms-3\be9a285d7d94d789380b4b7ef5365ae2\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\gamer\.gradle\caches\transforms-3\be9a285d7d94d789380b4b7ef5365ae2\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\gamer\.gradle\caches\transforms-3\a022374c772579687e4a912372d249a2\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41

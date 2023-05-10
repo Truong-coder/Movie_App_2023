@@ -1,7 +1,14 @@
 import axios, {AxiosError} from 'axios';
 import Config from 'react-native-config';
 import {Cast, CreditsRes} from '../types/Credits';
-import {Genre, Movie, MovieDetails, MoviesDBRes} from '../types/MoviesDB';
+import {
+  Genre,
+  Movie,
+  MovieDetails,
+  MoviesDBRes,
+  MovieTrailers,
+  MovieTrailerDBRes,
+} from '../types/MoviesDB';
 
 const moviesDB = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
@@ -71,6 +78,17 @@ export const getRecommendations = (movieId: number): Promise<MoviesDBRes> => {
     });
 };
 
+export const getDiscover = (): Promise<MoviesDBRes> => {
+  return moviesDB
+    .get('/discover/movie')
+    .then(res => res.data)
+    .catch(err => {
+      console.error(
+        `Error while fetching Discover Movies [${err.code}] cause ${err.cause}`,
+      );
+      throw err;
+    });
+};
 export const getSimilar = (movieId: number): Promise<MoviesDBRes> => {
   return moviesDB
     .get(`/movie/${movieId}/similar`)
@@ -89,7 +107,7 @@ export const getCastForMovie = (movieId: number): Promise<CreditsRes> => {
     .then(res => res.data)
     .catch(err => {
       console.error(
-        `Error while fetching CastForMovie [${err.code}] cause ${err.cause}`,
+        `Error while fetching Cast For Movie [${err.code}] cause ${err.cause}`,
       );
       throw err;
     });
@@ -101,7 +119,7 @@ export const getMovieDetails = (movieId: number): Promise<MovieDetails> => {
     .then(res => res.data)
     .catch(err => {
       console.error(
-        `Error while fetching CastForMovie [${err.code}] cause ${err.cause}`,
+        `Error while fetching Movie Details [${err.code}] cause ${err.cause}`,
       );
       throw err;
     });
@@ -119,17 +137,6 @@ export const getMovieGenres = (): Promise<Genre> => {
     });
 };
 
-export const getTVGenres = (): Promise<Genre> => {
-  return moviesDB
-    .get('/genre/tv/list')
-    .then(res => res.data)
-    .catch(err => {
-      console.error(
-        `Error while fetching TV Genres [${err.code}] cause ${err.cause}`,
-      );
-      throw err;
-    });
-};
 
 export const getSearchMovie = (query: string): Promise<MoviesDBRes> => {
   return moviesDB
@@ -146,3 +153,32 @@ export const getSearchMovie = (query: string): Promise<MoviesDBRes> => {
       throw err;
     });
 };
+
+export const getMovieTrailer = (
+  movieId: number,
+): Promise<MovieTrailerDBRes> => {
+  return moviesDB
+    .get(`/movie/${movieId}/videos`)
+    .then(res => res.data)
+    .catch(err => {
+      console.error(
+        `Error while fetching Movie Trailers [${err.code}] cause ${err.cause}`,
+      );
+      throw err;
+    });
+};
+
+// export const getMovieImg = (
+//   movieId: number,
+// ): Promise<MovieTrailerDBRes> => {
+//   return moviesDB
+//     .get(`/movie/${movieId}/videos`)
+//     .then(res => res.data)
+//     .catch(err => {
+//       console.error(
+//         `Error while fetching Movie Trailers [${err.code}] cause ${err.cause}`,
+//       );
+//       throw err;
+//     });
+// };
+

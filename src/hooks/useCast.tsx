@@ -5,8 +5,8 @@ export const useCastName = (movieId: number) => {
   const [castNames, setCastNames] = useState<string[]>([]);
   useEffect(() => {
     getCastForMovie(movieId).then(({cast}) => {
-      const names = cast.map(member => member.name);
-      setCastNames(names);
+      // const names = cast.map(member => member.name);
+      setCastNames(cast);
     });
   }, [movieId]);
   return {castNames};

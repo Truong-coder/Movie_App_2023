@@ -10,11 +10,14 @@ import {Watchlist} from '../screens/Watchlist';
 import {LoginScreen} from '../screens/LoginScreen';
 import {RegisterScreen} from '../screens/RegisterScreen';
 import {Movie} from '../types/MoviesDB';
+import {TvSeries} from '../types/tvSeriesDB';
+import {TvDetailsScreen} from '../screens/TvDetailsScreen';
 
 export type RootStackParamList = {
   Movies: undefined;
   Details: Movie;
   Favorites: undefined;
+  TvDetails: TvSeries;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -24,21 +27,13 @@ export const StackNavigator = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Movies" component={MoviesScreen} />
       <Stack.Screen name="Details" component={DetailsScreen} />
+      <Stack.Screen name="TvDetails" component={TvDetailsScreen} />
       <Stack.Screen name="Favorites" component={FavoritesScreen} />
       <Stack.Screen name="Search" component={SearchScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="List" component={Watchlist} />
-      {/* <Stack.Screen name="SearchTest" compoenent = {SearchScreenTest} /> */}
-      <Stack.Screen
-        name="Login"
-        component={LoginScreen}
-        // options={{headerShown: false, tabBarStyle: {display: 'none'}}}
-      />
-      <Stack.Screen
-        name="Register"
-        component={RegisterScreen}
-        // options={{headerShown: false, tabBarStyle: {display: 'none'}}}
-      />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Register" component={RegisterScreen} />
     </Stack.Navigator>
   );
 };

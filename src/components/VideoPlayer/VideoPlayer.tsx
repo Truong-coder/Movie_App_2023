@@ -1,39 +1,64 @@
-import React, {useRef} from 'react';
-import {View, StyleSheet} from 'react-native';
-import {WebView} from 'react-native-webview';
+import React, {useState, useCallback} from 'react';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {MovieTrailers, VideoKey} from '../../types/MoviesDB';
+import YoutubeIframe from 'react-native-youtube-iframe';
 
-export const VideoPlayer = ({video}) => {
-  const webViewRef = useRef(null);
+export const VideoPlayer = ({videoKey}) => {
 
-  const onWebViewLoad = () => {
-    webViewRef.current.injectJavaScript(`
-      document.querySelector('video').play();
-    `);
-  };
+  console.log('Video key: ', videoKey);
+
+  // Video Player
+  const [playing, setPlaying] = useState(false);
+
+  const onStateChange = useCallback(state => {
+    if (state === 'ended') {
+      setPlaying(false);
+    }
+  }, []);
+
+  // const renderItem = ({item}: {item: VideoKey}) => {
+  //   // const key = item.key;
+  //   // console.log('key:', key);
+
+  //   return (
+  //     // <YoutubeIframe
+  //     //   height={250}
+  //     //   play={playing}
+  //     //   videoId={item.key}
+  //     //   onChangeState={onStateChange}
+  //     // />
+  //     <YoutubePlayer
+  //     height={300}
+  //     play={playing}
+  //     videoId={item.key}
+  //     onChangeState={onStateChange}
+  //   />
+  //   );
+  // };
 
   return (
-    <View style={styles.container}>
-      <WebView
-        ref={webViewRef}
-        style={styles.video}
-        source={{
-          uri: `https://www.youtube.com/embed/${video.key}?playsinline=1`,
-        }}
-        allowsInlineMediaPlayback
-        onLoad={onWebViewLoad}
+    <View>
+      {/* <FlatList
+        data={[videoKey]} // wrap videoKey in an array
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+        horizontal
+      /> */}
+      <YoutubeIframe
+        height={250}
+        play={playing}
+        videoId={videoKey}
+        webViewProps={{androidLayerType: 'hardware'}}
+        onChangeState={onStateChange}
       />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  videoPlayer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  video: {
     width: '100%',
-    aspectRatio: 16 / 9,
+    height: '100%',
   },
 });

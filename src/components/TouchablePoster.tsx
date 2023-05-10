@@ -1,10 +1,28 @@
 import React from 'react';
 import {Image, StyleSheet, TouchableOpacity, View, Text} from 'react-native';
-import {Movie} from '../types/MoviesDB';
+import {
+  Movie,
+  MovieDetails,
+  ProductionCompanyPoster,
+  Credit,
+} from '../types/MoviesDB';
 import {useNavigation} from '@react-navigation/core';
+import {TvSeries} from '../types/tvSeriesDB';
 
 interface TouchablePosterProps {
   movie: Movie;
+}
+
+interface TouchableTvPosterProps {
+  tv: TvSeries;
+}
+
+interface TouchableCompaniesPosterProps {
+  productionComp: ProductionCompanyPoster;
+}
+
+interface TouchableCreditPosterProps {
+  credit: Credit;
 }
 
 export const TouchablePoster = ({movie}: TouchablePosterProps) => {
@@ -20,10 +38,53 @@ export const TouchablePoster = ({movie}: TouchablePosterProps) => {
   );
 };
 
+export const TouchableTvPoster = ({tv}: TouchableTvPosterProps) => {
+  const uri = `https://image.tmdb.org/t/p/w500${tv?.poster_path}`;
+  const navigation = useNavigation<any>();
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate('TvDetails', tv)}>
+        <Image source={{uri}} style={styles.image} />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export const TouchableCompaniesPoster = ({
+  productionComp,
+}: TouchableCompaniesPosterProps) => {
+  const uri = `https://image.tmdb.org/t/p/w500${productionComp?.logo_path}`;
+  const navigation = useNavigation<any>();
+  console.log('Companies Logo: ', uri);
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity>
+        <Image source={{uri}} style={styles.company_logo} resizeMode="center" />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export const TouchableCreditPoster = ({credit}: TouchableCreditPosterProps) => {
+  const uri = `https://image.tmdb.org/t/p/w500${credit?.profile_path}`;
+  const navigation = useNavigation<any>();
+  console.log('Profile: ', uri);
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity>
+        <Image source={{uri}} style={styles.profile} resizeMode="center" />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     width: 160,
-    height: 210,
+    height: 200,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -34,8 +95,20 @@ const styles = StyleSheet.create({
     elevation: 20,
   },
   image: {
-    width: 140,
-    height: 190,
-    borderRadius: 20,
+    width: '80%',
+    height: '100%',
+    borderRadius: 10,
+  },
+  company_logo: {
+    width: '80%',
+    height: '90%',
+    borderRadius: 10,
+    margin: 5,
+  },
+  profile: {
+    width: '80%',
+    height: '90%',
+    borderRadius: 10,
+    margin: 5,
   },
 });

@@ -1,46 +1,54 @@
 [
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "com.moviesapp-merged_res-30:/mipmap-mdpi_app_icon_test.png.flat",
+        "source": "com.moviesapp-main-32:/mipmap-mdpi/app_icon_test.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\mipmap-xhdpi_app_icons.png.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\mipmap-xhdpi\\app_icons.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "com.moviesapp-merged_res-30:/mipmap-xxxhdpi_app_icon_test.png.flat",
+        "source": "com.moviesapp-main-32:/mipmap-xxxhdpi/app_icon_test.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\mipmap-xxhdpi_app_icons.png.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\mipmap-xxhdpi\\app_icons.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\layout_launch_screen.xml.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\layout\\launch_screen.xml"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.moviesapp-merged_res-30:/mipmap-xxhdpi_app_icon_test.png.flat",
+        "source": "com.moviesapp-main-32:/mipmap-xxhdpi/app_icon_test.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\mipmap-hdpi_app_icons.png.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\mipmap-hdpi\\app_icons.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/drawable_rn_edit_text_material.xml.flat",
-        "source": "com.moviesapp-main-31:/drawable/rn_edit_text_material.xml"
+        "merged": "com.moviesapp-merged_res-30:/mipmap-hdpi_app_icon_test.png.flat",
+        "source": "com.moviesapp-main-32:/mipmap-hdpi/app_icon_test.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\mipmap-mdpi_app_icons.png.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\mipmap-mdpi\\app_icons.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "com.moviesapp-merged_res-30:/mipmap-xhdpi_app_icon_test.png.flat",
+        "source": "com.moviesapp-main-32:/mipmap-xhdpi/app_icon_test.png"
     },
     {
-        "merged": "com.moviesapp-merged_res-29:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.moviesapp-main-31:/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\drawable_splash_screen.png.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\drawable\\splash_screen.png"
+    },
+    {
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\drawable_rn_edit_text_material.xml.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\drawable\\rn_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-merged_res-30:\\mipmap-xxxhdpi_app_icons.png.flat",
+        "source": "C:\\Users\\gamer\\.gradle\\daemon\\7.5.1\\com.moviesapp-main-32:\\mipmap-xxxhdpi\\app_icons.png"
     }
 ]

@@ -4,6 +4,7 @@ import {
   getPopularMovies,
   getTopRatedMovies,
   getUpcomingMovies,
+  getDiscover
 } from '../services/moviedb';
 import {Movie, MoviesDBRes} from '../types/MoviesDB';
 
@@ -13,6 +14,7 @@ export const useMovies = () => {
   const [populars, setPopulars] = useState<Movie[]>([]);
   const [topRated, setTopRated] = useState<Movie[]>([]);
   const [upcoming, setUpcoming] = useState<Movie[]>([]);
+  const [discover, setDiscover] = useState<Movie[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   console.log('PlayingNow: ', playingNow);
@@ -34,6 +36,10 @@ export const useMovies = () => {
       console.log('UpcomingMovies:', movieRes.results);
       setUpcoming(movieRes.results);
     });
+    getDiscover().then((movieRes: MoviesDBRes) => {
+      console.log('Discover Movies:', movieRes.results);
+      setDiscover(movieRes.results);
+    });
     
   }, []);
 
@@ -44,5 +50,6 @@ export const useMovies = () => {
     upcoming,
     isLoading,
     latest,
+    discover,
   };
 };

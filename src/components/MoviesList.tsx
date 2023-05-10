@@ -62,10 +62,10 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    width: '95%',
+    width: '97%',
     height: '20%',
-    marginHorizontal: 0,
     marginTop: 10,
+    marginRight: 260
   },
   image: {
     borderColor: 'white',

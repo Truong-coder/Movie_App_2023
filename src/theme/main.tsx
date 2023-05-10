@@ -16,7 +16,13 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'black',
+    height: '50%'
+  },
+  detailScreen_container: {
+    flex: 1,
+    backgroundColor: 'black',
     paddingBottom: 50,
+    height: 2400
   },
   gradient: {
     position: 'absolute',
@@ -31,12 +37,12 @@ export const globalStyles = StyleSheet.create({
   },
   title: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 19,
     fontStyle: 'italic',
   },
   subtitle: {
     color: '#d3d3d3',
-    fontSize: 20,
+    fontSize: 19,
     fontStyle: 'italic',
   },
   row: {

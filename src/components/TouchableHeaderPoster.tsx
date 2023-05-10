@@ -1,18 +1,19 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {StyleSheet, TouchableOpacity, View, Text} from 'react-native';
-import {Movie} from '../types/MoviesDB';
-import {useNavigation} from '@react-navigation/core';
-import {HeaderPoster} from './HeaderPoster';
-import {TouchableIcon} from './TouchableIcon';
-import {FavoriteContext} from '../contexts/FavoriteContext';
+import React, { useContext, useEffect, useState } from 'react';
+import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import { Movie } from '../types/MoviesDB';
+import { useNavigation } from '@react-navigation/core';
+import { HeaderPoster } from './HeaderPoster';
+import { TouchableIcon } from './TouchableIcon';
+import { FavoriteContext } from '../contexts/FavoriteContext';
+// import { TvSeries } from '../types/tvSeriesDB';
 
 interface TouchablePosterProps {
   movie: Movie;
 }
 
-export const TouchableHeaderPoster = ({movie}: TouchablePosterProps) => {
+export const TouchableHeaderPoster = ({ movie, tv }: TouchablePosterProps) => {
   const navigation = useNavigation<any>();
-  const {favorites, isFavorite, toggleFavorite} = useContext(FavoriteContext);
+  const { favorites, isFavorite, toggleFavorite } = useContext(FavoriteContext);
   const [isMovieFavorite, setIsMovieFavorite] = useState(false);
 
   useEffect(() => {

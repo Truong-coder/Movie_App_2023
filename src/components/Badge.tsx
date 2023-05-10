@@ -13,7 +13,7 @@ export const Badge = (props: BadgeProps) => {
     <View
       style={{
         ...styles.badge,
-        height: props.height || 20,
+        height: props.height || 21,
         backgroundColor: props.color || styles.badge.backgroundColor,
       }}>
       <Text style={styles.badgeText}>{props.title}</Text>

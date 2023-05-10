@@ -14,6 +14,7 @@ import {Loader} from '../components/Loader';
 import {globalStyles} from '../theme/main';
 import {MoviesList} from '../components/MoviesList';
 import {getSearchMovie} from '../services/moviedb';
+import BackButton from '../components/BackButton';
 
 export const SearchScreen = () => {
   const [searchText, setSearchText] = useState('');
@@ -38,10 +39,17 @@ export const SearchScreen = () => {
   }, [searchText]);
 
   const handleSearch = text => {
+    const results = populars.filter(
+      movie =>
+        movie.title.toLowerCase().includes(text.toLowerCase()) ||
+        movie.release_date.toLowerCase().includes(text.toLowerCase()),
+    );
+    setSearchResults(results);
     setSearchText(text);
   };
 
   const handleCancel = () => {
+    setSearchResults([]);
     setSearchText('');
     setIsSearchActive(false);
   };
@@ -50,29 +58,34 @@ export const SearchScreen = () => {
     <Loader />
   ) : (
     <View style={{backgroundColor: 'black', flex: 1}}>
-      <View style={styles.search_bar_container}>
-        <TouchableOpacity onPress={() => setIsSearchActive(true)}>
-          <Icon
-            name="search-outline"
-            size={25}
-            color="black"
-            style={styles.icon}
-          />
-        </TouchableOpacity>
-        <View style={{flex: 1}}>
-          <TextInput
-            style={[styles.input, isSearchActive && styles.shortInput]}
-            placeholder="Search here ..."
-            placeholderTextColor={'#d3d3d3'}
-            onChangeText={handleSearch}
-            value={searchText}
-            clearButtonMode={isSearchActive ? 'never' : 'while-editing'}
-            onFocus={() => setIsSearchActive(true)}
-            onBlur={() => setIsSearchActive(false)}
-          />
+      <View style={{flexDirection: 'row', width: '85%'}}>
+        <View style={{marginTop: 20, marginLeft: 10}}>
+          <BackButton />
         </View>
-        {isSearchActive && (
-          <TouchableOpacity onPress={handleCancel}>
+
+        <View style={styles.search_bar_container}>
+          <TouchableOpacity onPress={() => setIsSearchActive(true)}>
+            <Icon
+              name="search-outline"
+              size={25}
+              color="black"
+              style={styles.icon}
+            />
+          </TouchableOpacity>
+          <View style={{flex: 1}}>
+            <TextInput
+              style={[styles.input, isSearchActive && styles.shortInput]}
+              placeholder="Search here ..."
+              placeholderTextColor={'#d3d3d3'}
+              onChangeText={handleSearch}
+              value={searchText}
+              clearButtonMode={isSearchActive ? 'never' : 'while-editing'}
+              onFocus={() => setIsSearchActive(true)}
+              onBlur={() => setIsSearchActive(false)}
+              // onSubmitEditing={handleSubmit}
+            />
+          </View>
+          <TouchableOpacity onPress={handleCancel} style={{marginLeft: 50}}>
             <Icon
               name="close-outline"
               size={25}
@@ -80,14 +93,14 @@ export const SearchScreen = () => {
               style={styles.icon}
             />
           </TouchableOpacity>
-        )}
+        </View>
       </View>
 
       {/* Display the search results */}
       {searchResults.length > 0 && <MoviesList movies={searchResults} />}
 
       {/* Display the popular movies if search results are empty */}
-      {searchResults.length === 0 && <MoviesList movies={populars} />}
+      {!isSearchActive && <MoviesList movies={populars} />}
     </View>
   );
 };
@@ -101,12 +114,13 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: 10,
     marginTop: 45,
+    width: '100%',
   },
   input: {
     flex: 1,
-    marginLeft: 10,
     height: 40,
     color: 'black',
+    width: '80%',
   },
   shortInput: {
     flex: 0.9,
