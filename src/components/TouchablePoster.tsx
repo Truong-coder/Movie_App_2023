@@ -39,8 +39,9 @@ export const TouchablePoster = ({movie}: TouchablePosterProps) => {
 };
 
 export const TouchableTvPoster = ({tv}: TouchableTvPosterProps) => {
-  const uri = `https://image.tmdb.org/t/p/w500${tv?.poster_path}`;
+  const uri = `https://image.tmdb.org/t/p/w500${tv.poster_path}`;
   const navigation = useNavigation<any>();
+  console.log("poster path: ", tv.poster_path);
 
   return (
     <View style={styles.container}>

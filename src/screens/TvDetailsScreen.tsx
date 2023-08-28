@@ -82,7 +82,7 @@ export const TvDetailsScreen = (props: DetailsProps) => {
     // ...
   };
 
-  //   console.log('movie in details: ', tvDetails);
+    console.log('tv show in details: ', tv);
   //   console.log('cast: ', castNames);
   //   console.log('recommendationsNames: ', recommendations);
   //   console.log('Trailer: ', movieVideos);

@@ -62,16 +62,21 @@ export const TvSeriesSlider = ({tv, title}: TvCarouselProps) => {
   );
 };
 
-export const TvSliderinDetails = ({tv, title}: MoviesCarouselProps) => {
+export const TvSliderinDetails = ({tv, title}: TvCarouselProps) => {
+  console.log('tv: ', tv);
   return (
     <View style={styles.new_flatListContainer}>
       <Text style={styles.flatListHeader}>{title}</Text>
-      <FlatList
-        showsHorizontalScrollIndicator={false}
-        data={tv}
-        renderItem={({item}) => <TouchableTvPoster tv={item} />}
-        horizontal
-      />
+      {tv == null ? (
+        <Text style={styles.text}>Nothing to show</Text>
+      ) : (
+        <FlatList
+          showsHorizontalScrollIndicator={false}
+          data={tv}
+          renderItem={({item}) => <TouchableTvPoster tv={item} />}
+          horizontal
+        />
+      )}
     </View>
   );
 };

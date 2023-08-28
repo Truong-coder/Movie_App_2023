@@ -21,7 +21,7 @@ export const globalStyles = StyleSheet.create({
   detailScreen_container: {
     flex: 1,
     backgroundColor: 'black',
-    paddingBottom: 50,
+    // paddingBottom: 50,
     height: 2400
   },
   gradient: {
